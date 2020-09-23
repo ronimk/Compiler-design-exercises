@@ -60,9 +60,9 @@ static void vParserTask(void *pvParameters) {
 	char str[50];
 	int c;
 	while (1) {
-      parser.parse(&parsedData);
+            parser.parse(&parsedData);
 
-      // process the parsed data in parsedData...
+            // process the parsed data in parsedData...
 	}
 
 }
