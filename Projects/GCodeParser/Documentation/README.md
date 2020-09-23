@@ -9,4 +9,5 @@ The framework itself consists of the parser, a "Gcode pipe" through which the Gc
 <br>
 I was mostly responsible for creating the parser. I also co created the GcodePipe class hierarcy with my teammates.
 <br>
+<br>
 The parser itself was designed in the spirit of the "Compilers"-book by Aho et al. Following the first two chapters of the book, a context free grammar was created for helping in the design process of the parser to parse the required subset of Gcodes (can be found at "CFG for Gcode.pdf"). The parser logic followed the designed CFG and the "Predictive Parsing" section (2.4.2) of the book.
