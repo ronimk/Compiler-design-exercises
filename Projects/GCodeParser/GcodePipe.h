@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _G_CODE_PIPE_H_
+#define _G_CODE_PIPE_H_
 
 class GcodePipe {
 public:
@@ -10,3 +11,5 @@ public:
 	virtual bool sendErr() = 0;
 	virtual ~GcodePipe() = 0;
 };
+
+#endif
