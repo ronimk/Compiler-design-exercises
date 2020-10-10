@@ -270,6 +270,7 @@ bool Parser::setPenPosParser(ParsedGdata *data, char *tokLine) {
 		return false;
 
 	if (!extract8BitUint(&data->penPosition, tokLine, true, lineEndChar))
+		return false;
 
 	data->codeType = GcodeType::M1;
 	return true;
