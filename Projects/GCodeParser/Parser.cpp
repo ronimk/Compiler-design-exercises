@@ -439,7 +439,7 @@ bool Parser::extractDirection(int *storage, char *dirStr, bool hasDelimChar, cha
  *  	   match the delimChar.
  *  @return true if the extraction succeeded, false otherwise
  */
-bool extractInt(int *storage, char *numStr, bool hasDelimChar = false, char delimChar = '\0') {
+bool Parser::extractInt(int *storage, char *numStr, bool hasDelimChar, char delimChar) {
 	long val;
 	char *rem;
 
