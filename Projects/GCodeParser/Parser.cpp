@@ -180,7 +180,7 @@ bool Parser::gotoPositionParser(ParsedGdata *data, char *tokLine) {
 	if (!validateFloatStr(&tokLine[1], false))
 		return false;
 
-	data->PenXY.X = atof(tokLine+1);
+	data->PenXY.Y = atof(tokLine+1);
 
 	tokLine = nextToken();
 
