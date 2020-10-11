@@ -29,7 +29,11 @@ char *Parser::tokenize(){
 	tokens.currToken = codeLine;
 
 	char *currPos = codeLine;
+	if (*currPos == '\0')
+		return tokens.currToken;
 
+	tokens.numTokens = 1;
+	tokens.currTokenNum = 1;
 
 	while(*currPos != '\0') {
 		if(*currPos == tokenDelimChar) {
@@ -51,13 +55,17 @@ char *Parser::tokenize(){
  * @return pointer to the next token if there are more tokens, NULL otherwise.
  */
 char *Parser::nextToken(void) {
-	char *currToken = tokens.currToken;
+	tokens.currTokenNum++;
 
-	if (*currToken == tokens.numTokens-1) {
+	if (tokens.currTokenNum > tokens.numTokens) {
 		return NULL;
 	}
 	else {
+		char *currToken = tokens.currToken;
+
 		while(*(currToken++) != '\0') ;
+
+		tokens.currToken = currToken;
 
 		return currToken;
 	}
